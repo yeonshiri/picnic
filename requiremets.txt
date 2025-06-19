@@ -1,0 +1,10 @@
+numpy==1.19.5
+scipy==1.5.4
+filterpy==1.4.5
+tensorrt==8.2.1.8         
+opencv-python==3.2.0.6  
+six==1.11.0
+matplotlib==2.1.1 
+Pillow==8.4.0
+pandas==0.22.0
+scipy==1.5.4

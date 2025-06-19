@@ -8,12 +8,13 @@ git clone https://github.com/yeonshiri/picnic.git
 cd AGS
 pip install -r requirements.txt
 </pre>   
-TensorRT, OpenCV가 실패시
+TensorRT, OpenCV, scipy가 실패시
 <pre>
 sudo apt update
 sudo apt install -y \
-    python3-opencv \                 
-    python3-libnvinfer python3-libnvinfer-dev  
+    python3-opencv \                  
+    python3-libnvinfer python3-libnvinfer-dev \  
+    liblapack-dev libopenblas-dev libgeos-dev   
 </pre>   
 
 이후에 터미널에서 python3 project.py 를 씁니다.
