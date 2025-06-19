@@ -5,7 +5,7 @@ git에서 yolov5를 다운로드 받은 후 다음과 같은 directory를 만들
 <pre>
 #git에서 프로젝트 설치 
 git clone https://github.com/yeonshiri/picnic.git
-cd AGS
+cd picnic
 pip install -r requirements.txt
 </pre>   
 TensorRT, OpenCV, scipy가 실패시
@@ -14,7 +14,9 @@ sudo apt update
 sudo apt install -y \
     python3-opencv \                  
     python3-libnvinfer python3-libnvinfer-dev \  
-    liblapack-dev libopenblas-dev libgeos-dev   
+    liblapack-dev libopenblas-dev libgeos-dev 
+
+pip install -r requirements.txt  
 </pre>   
 
 이후에 터미널에서 python3 project.py 를 씁니다.
