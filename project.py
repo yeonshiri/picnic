@@ -15,8 +15,8 @@ VIDEO_PATH = "input.mp4"
 BUFFER_SIZE = 1
 
 def yolo_worker(frame_q: queue.Queue, result_dict: dict):
-    from modules.detect import TRTInfer  # ⚠️ worker 안에서 import (pycuda.autoinit 분리 보장)
-    model = TRTInfer(MODEL_PATH)        # ✅ context 포함 객체 생성은 스레드 안에서!
+    from modules.detect import TRTInfer 
+    model = TRTInfer(MODEL_PATH)        
 
     states = initialize_states()
 
@@ -50,7 +50,7 @@ def yolo_worker(frame_q: queue.Queue, result_dict: dict):
 def main():
     cap = cv2.VideoCapture(VIDEO_PATH)
     if not cap.isOpened():
-        raise RuntimeError(f"❌ Cannot open video source: {VIDEO_PATH}")
+        raise RuntimeError(f" Cannot open video source: {VIDEO_PATH}")
 
     orig_fps = cap.get(cv2.CAP_PROP_FPS)
     if orig_fps == 0 or np.isnan(orig_fps):
@@ -75,7 +75,7 @@ def main():
     while True:
         ret, frame = cap.read()
         if not ret:
-            print("⚠️ Video read failed.")
+            print(" Video read failed.")
             break
 
         # 최신 프레임만 큐에 유지
